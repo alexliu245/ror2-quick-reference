@@ -1,0 +1,10 @@
+@import '/src/css/flex-mixins.scss';
+
+.header-body {
+    @include flexbox(row);
+
+    width: 100%;
+    height: 84px;
+
+    background-color: black;
+}
