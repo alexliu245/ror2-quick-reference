@@ -1,0 +1,13 @@
+@import "/src/css/flex-mixins.scss";
+@import '/src/css/typography.scss';
+@import '/src/css/colors.scss';
+
+.section-body {
+    @include flexbox(column, start, start);
+    width: 100%;
+}
+
+.section-title {
+    @include header_text;
+    color: $standardText;
+}
