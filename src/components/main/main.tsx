@@ -2,9 +2,17 @@ import React from "react";
 import MainSection from "../mainSection/mainSection";
 import "./main.scss";
 
-import { info, whiteItems } from "consts/item_info";
+import { 
+	bossItems, 
+	equipment, 
+	greenItems, 
+	info, 
+	lunarItems, 
+	redItems, 
+	whiteItems
+} from "consts/item_info";
 
-const Main = () => {
+const Main: React.FC = () => {
 	function buildItemArray(itemIds: string[]) {
 		return itemIds.map(id => info[id]);
 	}
@@ -12,10 +20,29 @@ const Main = () => {
 	return (
 		<div className="main-body">
 			<MainSection 
-				title="Common Items"
+				title="White Items"
 				contents={ buildItemArray(whiteItems) }
 			/>
-			<p className="main-body-header-text">TESTING</p>
+			<MainSection 
+				title="Green Items"
+				contents={ buildItemArray(greenItems) }
+			/>
+			<MainSection 
+				title="Red Items"
+				contents={ buildItemArray(redItems) }
+			/>
+			<MainSection 
+				title="Boss Items"
+				contents={ buildItemArray(bossItems) }
+			/>
+			<MainSection 
+				title="Lunar Items"
+				contents={ buildItemArray(lunarItems) }
+			/>
+			<MainSection 
+				title="Equipment"
+				contents={ buildItemArray(equipment) }
+			/>
 		</div>
 	);
 }

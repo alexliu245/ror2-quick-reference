@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./simpleItemDisplay.scss";
 import { Item } from "consts/item_info";
-
+import { getColoredText } from "functions/textColorAdapter";
+ 
 interface SimpleItemDisplayProps {
     item: Item,
 }
@@ -15,6 +16,8 @@ const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
 		setHovered(value);
 	}
 
+	console.log(item.name);
+
 	return (
 		<div className="item-parent-container">
 			{ isHovered ? (
@@ -23,11 +26,16 @@ const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
 						{ item.name }
 					</div>
 					<div className="item-description">
-						{ item.description }
+						{ getColoredText(item.description) }
 					</div>
 					{ item.challenge ? (
-						<div className="item-challenge">
-							{ item.challenge }
+						<div className="item-challenge-container">
+							<div className="item-challenge-name">
+								Challenge
+							</div>
+							<div className="item-challenge-description">
+								{ item.challenge }
+							</div>
 						</div>
 					) : null}
 				</div>

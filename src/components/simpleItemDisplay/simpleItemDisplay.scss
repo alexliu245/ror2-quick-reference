@@ -12,13 +12,53 @@
 .item-tooltip-container {
     @include flexbox(column);
 
-    position: absolute;
+    width: 280px;
 
+    padding: 0 24px;
+
+    position: absolute;
     left: 50%;
     top: calc(100% + 12px);
     transform: translateX(-50%);
-
     z-index: 999;
 
-    background-color: white;
+    border: 2px solid $backgroundBorder;
+}
+
+.item-name {
+    @include header_text;
+
+    background-color: $backgroundLight;
+    width: 100%;
+    padding: 24px 24px 12px 24px;
+    color: $standardText;
+    border: 1px solid $backgroundLightBorder;
+}
+
+.item-description {
+    @include body_text;
+    
+    background-color: $backgroundDark;
+    padding: 12px 24px;
+    width: 100%;
+}
+
+.item-challenge-container {
+    background-color: $backgroundLight;
+    padding: 12px 24px 24px 24px;
+    width: 100%;
+    border: 1px solid $backgroundLightBorder;
+}
+
+.item-challenge-name{
+    @include header_text;
+
+    color: $standardText;
+    margin-bottom: 8px;
+}
+
+.item-challenge-description {
+    @include body_text;
+
+    color: $standardText;
 }
