@@ -21,7 +21,13 @@ export function getColoredText(text: string[]): JSX.Element {
 				text.map((t, i) => {
 					const splitText = t.split("::");
 					const color = splitText[0];
-					return (
+
+					return color === "br" ? (
+						<span>
+							<br />
+							<br />
+						</span>
+					) : (
 						<span 
 							style={{ color: ColorMapping[color]}}
 							key={i}
@@ -31,6 +37,7 @@ export function getColoredText(text: string[]): JSX.Element {
 					);
 				})
 			}
+			<span style={{color: ColorMapping["sta"]}}>.</span>
 		</p>
 	);
 }

@@ -5,7 +5,7 @@ import Header from "components/header/header";
 import Main from "components/main/main";
 import Footer from "components/footer/footer";
 
-const App = () => {
+const App: React.FC = () => {
 	return (
 		<div className="main-app">
 			<Header />

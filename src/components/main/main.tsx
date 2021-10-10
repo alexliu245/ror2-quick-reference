@@ -2,15 +2,8 @@ import React from "react";
 import MainSection from "../mainSection/mainSection";
 import "./main.scss";
 
-import { 
-	bossItems, 
-	equipment, 
-	greenItems, 
-	info, 
-	lunarItems, 
-	redItems, 
-	whiteItems
-} from "consts/item_info";
+import { info } from "consts/itemInfo";
+import { itemGroups } from "consts/itemGroups";
 
 const Main: React.FC = () => {
 	function buildItemArray(itemIds: string[]) {
@@ -21,27 +14,27 @@ const Main: React.FC = () => {
 		<div className="main-body">
 			<MainSection 
 				title="White Items"
-				contents={ buildItemArray(whiteItems) }
+				contents={ buildItemArray(itemGroups["whiteItems"]) }
 			/>
 			<MainSection 
 				title="Green Items"
-				contents={ buildItemArray(greenItems) }
+				contents={ buildItemArray(itemGroups["greenItems"]) }
 			/>
 			<MainSection 
 				title="Red Items"
-				contents={ buildItemArray(redItems) }
+				contents={ buildItemArray(itemGroups["redItems"]) }
 			/>
 			<MainSection 
 				title="Boss Items"
-				contents={ buildItemArray(bossItems) }
+				contents={ buildItemArray(itemGroups["bossItems"]) }
 			/>
 			<MainSection 
 				title="Lunar Items"
-				contents={ buildItemArray(lunarItems) }
+				contents={ buildItemArray(itemGroups["lunarItems"]) }
 			/>
 			<MainSection 
 				title="Equipment"
-				contents={ buildItemArray(equipment) }
+				contents={ buildItemArray(itemGroups["equipment"]) }
 			/>
 		</div>
 	);

@@ -6,7 +6,10 @@
     display: block;
     position: relative;
 
-    border: 1px solid $backgroundLightBorder;
+    border: 1px solid $backgroundBorder;
+    &:hover {
+        border: 1px solid $backgroundLightBorder;
+    }
 }
 
 .item-tooltip-container {
@@ -41,6 +44,15 @@
     background-color: $backgroundDark;
     padding: 12px 24px;
     width: 100%;
+}
+
+.item-secondary-description {
+    @include body_text;
+
+    color: $textGray;
+    padding: 0px 24px 24px 24px;
+    width: 100%;
+    background-color: $backgroundDark;
 }
 
 .item-challenge-container {

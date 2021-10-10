@@ -2,7 +2,7 @@ import React from "react";
 import "./mainSection.scss";
 
 import SimpleItemDisplay from "components/simpleItemDisplay/simpleItemDisplay";
-import { Item } from "consts/item_info";
+import { Item } from "consts/itemTypes";
 
 interface MainSectionProps {
     title: string;

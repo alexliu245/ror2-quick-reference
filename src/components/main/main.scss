@@ -5,9 +5,7 @@
 .main-body {
     @include flexbox(column);
 
-    margin-top: 48px;
-    margin-left: auto; 
-    margin-right: auto;
+    margin: 64px auto;
 
     padding: 24px 48px;
     

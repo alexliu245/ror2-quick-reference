@@ -2,7 +2,7 @@ import React from "react";
 
 import "./header.scss";
 
-const Header = () => {
+const Header: React.FC = () => {
 	return (
 		<header>
 			<div className="header-body">
