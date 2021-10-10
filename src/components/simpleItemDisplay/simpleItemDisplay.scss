@@ -1,0 +1,24 @@
+@import '/src/css/flex-mixins.scss';
+@import '/src/css/typography.scss';
+@import '/src/css/colors.scss';
+
+.item-parent-container {
+    display: block;
+    position: relative;
+
+    border: 1px solid $backgroundLightBorder;
+}
+
+.item-tooltip-container {
+    @include flexbox(column);
+
+    position: absolute;
+
+    left: 50%;
+    top: calc(100% + 12px);
+    transform: translateX(-50%);
+
+    z-index: 999;
+
+    background-color: white;
+}

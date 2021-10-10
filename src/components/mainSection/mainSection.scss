@@ -5,9 +5,19 @@
 .section-body {
     @include flexbox(column, start, start);
     width: 100%;
+    max-width: 100%;
 }
 
 .section-title {
     @include header_text;
     color: $standardText;
+}
+
+.item-section-container {
+   @include flexbox(row, start, start);
+
+   column-gap: 8px;
+   row-gap: 8px;
+
+   flex-wrap: wrap;
 }
