@@ -1854,7 +1854,7 @@ export const info: Record<string, Item> = {
 			"sta::Looks like it could power something. ",
 			"red::EXTREMELY unstable...",
 			"br::",
-			"gra::A 30m explosion is triggered upon dropping below, 50% of maximum health, dealing 300% of holder's maximum health to holder and enemies in radius.",
+			"gra::A 30m explosion is triggered upon dropping below 50% of maximum health, dealing 300% of holder's maximum health to holder and enemies in radius.",
 			"br::",
 			"gra::Completes the Power Plant challenge if brought to the broken robot in Abyssal Depths, unlocking REX as a survivor",
 		],
@@ -2076,6 +2076,8 @@ export const info: Record<string, Item> = {
 		description: [
 			"sta::Become an aspect of ice. ",
 			"br::",
+			"gra::Always active.",
+			"br::",
 			"gra::Holder's attacks slow enemies by 80% for 1.5s. On death, holder explodes for 150% damage, freezing all enemies in the explosion radius",
 		],
 		image_url: "https://minmax.gg/riskofrain/static/d03a816b81dc822e1f898f395b232744/ea22a/her-biting-embrace_67316480-9091-11eb-a1db-b14d6457f763.png",
@@ -2087,6 +2089,8 @@ export const info: Record<string, Item> = {
 		description: [
 			"sta::Become an aspect of fire. ",
 			"br::",
+			"gra::Always active.",
+			"br::",
 			"gra::A trail of fire is left by the holder, apply a percent burn on hit to enemies",
 		],
 		image_url: "https://minmax.gg/riskofrain/static/c4ec4463a64df924e92fc28675621dd0/ea22a/ifrits-distinction_6733d580-9091-11eb-a1db-b14d6457f763.png",
@@ -2096,6 +2100,8 @@ export const info: Record<string, Item> = {
 		name: "N'kuhana's Retort",
 		description: [
 			"sta::Become an aspect of corruption. ",
+			"br::",
+			"gra::Always active.",
 			"br::",
 			"gra::3-4 Urchins are occasionally launched out of the holder, dealing 100% damage and a healing disabled debuff for 8s",
 		],
@@ -2108,6 +2114,8 @@ export const info: Record<string, Item> = {
 		description: [
 			"sta::Become an aspect of perfection. ",
 			"br::",
+			"gra::Always active.",
+			"br::",
 			"gra::Holder's attacks cripple enemies on hit. Holder occasionally fire 5 bomb projectiles at enemies, gains 30% increased movement speed and gains 25% maximum health. Holder's health is replaced with shields",
 		],
 		image_url: "https://minmax.gg/riskofrain/static/2f1c088e82d1e7b02803f9c1f378c608/ea22a/shared-design_6735d150-9091-11eb-a1db-b14d6457f763.png",
@@ -2118,6 +2126,8 @@ export const info: Record<string, Item> = {
 		description: [
 			"sta::Become an aspect of lightning. ",
 			"br::",
+			"gra::Always active.",
+			"br::",
 			"gra::50% of holder's health is replaced with shield. Holder's attacks attach a delayed bomb that explodes for 50% damage",
 		],
 		image_url: "https://minmax.gg/riskofrain/static/55850c8afcd6d31c255b1b4e73238981/ea22a/silence-between-two-strikes_6733ae70-9091-11eb-a1db-b14d6457f763.png",
@@ -2127,6 +2137,8 @@ export const info: Record<string, Item> = {
 		name: "Spectral Circlet",
 		description: [
 			"sta::Become an aspect of incorporeality. ",
+			"br::",
+			"gra::Always active.",
 			"br::",
 			"gra::Nearby allies are cloaked. Holder's attacks apply an 80% slow on hit",
 		],
