@@ -3,7 +3,6 @@ A simple React.js + Typescript web-app for quickly looking up information regard
 
 
 ## **Development**
------
 Clone the repository into your local environment:
 ```
 git clone https://github.com/alexliu245/ror2-quick-reference.git
@@ -20,14 +19,12 @@ Open http://localhost:3000 with your browser to see the result.
 
 
 ## **Acknowledgements**
------
 Risk of Rain 2™ is a registered trademark of Hopoo Games, LLC.
 
 Several images used can be found on https://riskofrain2.fandom.com/wiki/.
 
 
 ## **License**
------
 MIT License
 
 Copyright (c) 2021 Alex Liu
@@ -53,7 +50,6 @@ SOFTWARE.
 
 
 ## **TODO**
------
 - [x] Display Items and Equipment
 - [ ] Add verbose/advanced expanded info view
 - [ ] Host website
