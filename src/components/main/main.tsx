@@ -5,8 +5,11 @@ import "./main.scss";
 import { info } from "consts/itemInfo";
 import { itemGroups } from "consts/itemGroups";
 import { Item } from "consts/itemTypes";
+import { Transition } from "react-transition-group";
 
 import AdvancedItemDisplay from "components/advancedItemDisplay/advancedItemDisplay";
+
+
 
 const Main: React.FC = () => {
 	const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
