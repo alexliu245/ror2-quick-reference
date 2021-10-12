@@ -148,11 +148,29 @@ const equipment: string[] = [
 	"aspect_incorporeal",
 ];
 
-export const itemGroups: Record<string, string[]> = {
-	"whiteItems": whiteItems,
-	"greenItems": greenItems,
-	"redItems": redItems,
-	"bossItems": bossItems,
-	"lunarItems": lunarItems,
-	"equipment": equipment,
+export const itemGroups: Record<string, {name: string, items: string[]}> = {
+	whiteItems: {
+		name: "White Items",
+		items: whiteItems,
+	},
+	greenItems: {
+		name: "Green Items",
+		items: greenItems,
+	},
+	redItems: {
+		name: "Red Items",
+		items: redItems,
+	},
+	bossItems: {
+		name: "Boss Items",
+		items: bossItems,
+	},
+	lunarItems: {
+		name: "Lunar Items",
+		items: lunarItems,
+	},
+	equipment: {
+		name: "Equipment",
+		items: equipment,
+	}
 };

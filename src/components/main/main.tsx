@@ -30,36 +30,18 @@ const Main: React.FC = () => {
 				isOpen={sidebarOpen}
 				closeSidebar={() => setSidebarOpen(false)}
 			/>
-			<MainSection
-				title="White Items"
-				contents={ buildItemArray(itemGroups["whiteItems"]) }
-				itemSelected={itemSelected}
-			/>
-			<MainSection
-				title="Green Items"
-				contents={ buildItemArray(itemGroups["greenItems"]) }
-				itemSelected={itemSelected}
-			/>
-			<MainSection
-				title="Red Items"
-				contents={ buildItemArray(itemGroups["redItems"]) }
-				itemSelected={itemSelected}
-			/>
-			<MainSection
-				title="Boss Items"
-				contents={ buildItemArray(itemGroups["bossItems"]) }
-				itemSelected={itemSelected}
-			/>
-			<MainSection
-				title="Lunar Items"
-				contents={ buildItemArray(itemGroups["lunarItems"]) }
-				itemSelected={itemSelected}
-			/>
-			<MainSection
-				title="Equipment"
-				contents={ buildItemArray(itemGroups["equipment"]) }
-				itemSelected={itemSelected}
-			/>
+			{ Object.keys(itemGroups).map((key, i) => {
+				const group = itemGroups[key];
+				return (
+					<div key={i}>
+						<MainSection
+							title={group.name}
+							contents={buildItemArray(group.items)}
+							itemSelected={itemSelected}
+						/>
+					</div>
+				)	
+			})}
 		</div>
 	);
 }
