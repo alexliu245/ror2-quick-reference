@@ -9,6 +9,7 @@
     border: 1px solid $backgroundBorder;
     &:hover {
         border: 1px solid $backgroundLightBorder;
+        cursor: pointer;
     }
 }
 
@@ -23,7 +24,7 @@
     left: 50%;
     top: calc(100% + 12px);
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 2;
 
     border: 2px solid $backgroundBorder;
 }

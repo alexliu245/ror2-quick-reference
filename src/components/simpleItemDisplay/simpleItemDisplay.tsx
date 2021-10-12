@@ -5,10 +5,11 @@ import { getColoredText } from "functions/textColorAdapter";
  
 interface SimpleItemDisplayProps {
     item: Item,
+    itemSelected: (item: Item) => void;
 }
 
 const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
-	{ item }: SimpleItemDisplayProps
+	{ item, itemSelected }: SimpleItemDisplayProps
 ) => {
 	const [isHovered, setHovered] = useState(false);
 
@@ -17,7 +18,10 @@ const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
 	}
 
 	return (
-		<div className="item-parent-container">
+		<div 
+			className="item-parent-container"
+			onClick={() => itemSelected(item)}
+		>
 			{ isHovered ? (
 				<div className="item-tooltip-container">
 					<div className="item-name">
@@ -27,17 +31,26 @@ const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
 						{ getColoredText(item.description) }
 					</div>
 					{ item.cooldown ? (
-						<div className="item-secondary-description">
+						<div
+							className="item-secondary-description" 
+							key={`${item.name}_cooldown`}
+						>
 							{`Cooldown: ${item.cooldown}s`}
 						</div>
 					) : null}
 					{ item.proc_coefficient ? (
-						<div className="item-secondary-description">
+						<div
+							className="item-secondary-description" 
+							key={`${item.name}_proc_coefficient`}
+						>
 							{`Proc Coefficient: ${item.proc_coefficient}`}
 						</div>
 					) : null}
 					{ item.scaling ? (
-						<div className="item-secondary-description">
+						<div
+							className="item-secondary-description" 
+							key={`${item.name}_scaling`}
+						>
 							{`Scaling Type: ${item.scaling}`}
 						</div>
 					) : null}

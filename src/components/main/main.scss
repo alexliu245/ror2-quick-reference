@@ -2,7 +2,7 @@
 @import '/src/css/typography.scss';
 @import '/src/css/colors.scss';
 
-.main-body {
+.main-grid {
     @include flexbox(column);
 
     margin: 64px auto;
@@ -13,9 +13,3 @@
     max-width: 720px;
     background-color: $backgroundDark;
 }
-
-.main-body-header-text {
-    @include header_text;
-    color: $standardText;
-}
-
