@@ -5,8 +5,8 @@ import SimpleItemDisplay from "components/simpleItemDisplay/simpleItemDisplay";
 import { Item } from "consts/itemTypes";
 
 interface MainSectionProps {
-    title: string;
-    contents: Item[];
+    title: string,
+    contents: Item[],
 	itemSelected: (item: Item) => void,
 }
 

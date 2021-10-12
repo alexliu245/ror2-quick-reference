@@ -5,11 +5,14 @@ import { getColoredText } from "functions/textColorAdapter";
  
 interface SimpleItemDisplayProps {
     item: Item,
-    itemSelected: (item: Item) => void;
+    itemSelected: (item: Item) => void,
 }
 
 const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
-	{ item, itemSelected }: SimpleItemDisplayProps
+	{
+		item,
+		itemSelected,
+	}: SimpleItemDisplayProps
 ) => {
 	const [isHovered, setHovered] = useState(false);
 

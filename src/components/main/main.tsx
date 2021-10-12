@@ -5,11 +5,8 @@ import "./main.scss";
 import { info } from "consts/itemInfo";
 import { itemGroups } from "consts/itemGroups";
 import { Item } from "consts/itemTypes";
-import { Transition } from "react-transition-group";
 
 import AdvancedItemDisplay from "components/advancedItemDisplay/advancedItemDisplay";
-
-
 
 const Main: React.FC = () => {
 	const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
@@ -28,12 +25,11 @@ const Main: React.FC = () => {
 
 	return (
 		<div className="main-grid">
-			{sidebarOpen ? (
-				<AdvancedItemDisplay
-					item={sidebarItem}
-					closeSidebar={() => setSidebarOpen(false)}
-				/>
-			): null}
+			<AdvancedItemDisplay
+				item={sidebarItem}
+				isOpen={sidebarOpen}
+				closeSidebar={() => setSidebarOpen(false)}
+			/>
 			<MainSection
 				title="White Items"
 				contents={ buildItemArray(itemGroups["whiteItems"]) }
