@@ -6,9 +6,9 @@
     display: block;
     position: relative;
 
-    border: 1px solid $backgroundBorder;
+    border: 2px solid $backgroundBorder;
     &:hover {
-        border: 1px solid $backgroundLightBorder;
+        border: 2px solid $backgroundLightBorder;
         cursor: pointer;
     }
 }
@@ -35,7 +35,7 @@
     background-color: $backgroundLight;
     width: 100%;
     padding: 24px 24px 12px 24px;
-    color: $standardText;
+    color: $rorStandard;
     border: 1px solid $backgroundLightBorder;
 }
 
@@ -50,7 +50,7 @@
 .item-secondary-description {
     @include body_text;
 
-    color: $textGray;
+    color: $rorGray;
     padding: 0px 24px 24px 24px;
     width: 100%;
     background-color: $backgroundDark;
@@ -66,12 +66,38 @@
 .item-challenge-name{
     @include header_text;
 
-    color: $standardText;
+    color: $rorStandard;
     margin-bottom: 8px;
 }
 
 .item-challenge-description {
     @include body_text;
 
-    color: $standardText;
+    color: $rorStandard;
+}
+
+// item background colors
+
+@mixin simple-item-display-background($transitionColor) {
+    background: $transitionColor;
+    background: radial-gradient(circle, $transitionColor 33%, $backgroundBorder 100%);
+}
+
+.simple-item-display-white {
+    @include simple-item-display-background($rorGray);
+}
+.simple-item-display-green {
+    @include simple-item-display-background($rorDarkerGreen);
+}
+.simple-item-display-blue {
+    @include simple-item-display-background($rorDarkerLunar);
+}
+.simple-item-display-red {
+    @include simple-item-display-background($rorRed);
+}
+.simple-item-display-yellow {
+    @include simple-item-display-background($rorYellow);
+}
+.simple-item-display-equipment {
+    @include simple-item-display-background($rorEquipment);
 }

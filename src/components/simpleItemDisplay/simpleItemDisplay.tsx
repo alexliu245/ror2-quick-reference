@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import "./simpleItemDisplay.scss";
-import { Item } from "consts/itemTypes";
+import { Item, ItemRarities } from "consts/itemTypes";
 import { getColoredText } from "functions/textColorAdapter";
  
+const cssBackgroundClass: Record<ItemRarities, string> = {
+	[ItemRarities.WHITE]: "simple-item-display-white",
+	[ItemRarities.GREEN]: "simple-item-display-green",
+	[ItemRarities.BLUE]: "simple-item-display-blue",
+	[ItemRarities.YELLOW]: "simple-item-display-yellow",
+	[ItemRarities.RED]: "simple-item-display-red",
+	[ItemRarities.EQUIPMENT]: "simple-item-display-equipment",
+}
+
 interface SimpleItemDisplayProps {
     item: Item,
     itemSelected: (item: Item) => void,
@@ -22,7 +31,7 @@ const SimpleItemDisplay: React.FC<SimpleItemDisplayProps> = (
 
 	return (
 		<div 
-			className="item-parent-container"
+			className={`item-parent-container ${cssBackgroundClass[item.rarity]}`}
 			onClick={() => itemSelected(item)}
 		>
 			{ isHovered ? (
